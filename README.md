@@ -33,6 +33,7 @@
 <div style = "color: #555">
 
 ```js
+Logger.Enabled = true;
 Logger.Log(Logger.LogLevel.INFO, 'AppError loaded');
 Logger.Log(Logger.LogLevel.DEBUG, '...');
 Logger.Log(Logger.LogLevel.ERROR, 'Invalid arguments');

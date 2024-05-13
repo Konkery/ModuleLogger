@@ -1,7 +1,26 @@
+/**
+ * @class
+ * Класс предоставляет инструменты для логирования 
+ */
 class ClassLogger {
     constructor() {
-        // this._I = 1;
+        this._Enabled = true;
     }
+    /**
+     * @setter
+     * @param {Boolean} flag 
+     */
+    set Enabled(flag) {
+        if (typeof flag === 'boolean') {
+            this._Enabled = flag;
+            return true;
+        }
+        return false;    
+    }
+    /**
+     * @getter
+     * Объект с уровнями логов 
+     */
     get LogLevel() {
         return ({
             INFO: 'INFO',
@@ -11,8 +30,9 @@ class ClassLogger {
         });
     }
     Log(qlfier, msg) {
+        if (!this._Enabled) return;
+        
         if (this.LogLevel[qlfier]) {
-            // TODO: get time from Process
             console.log(`[${Process.GetSystemTime()}] ${qlfier}>> ${msg}`);
             return true;
         }
