@@ -18,14 +18,14 @@
 ## Описание
 <div style = "color: #555">
 
-Модуль предназначен для логирования сообщений в рамках фреймворка EcoLight.
+Модуль предназначен для логирования сообщений в рамках фреймворка EcoLite.
 
 </div>
 
 ### Методы
 <div style = "color: #555">
 
-- <mark style="background-color: lightblue">Log(_level, _msg)</mark> - делает лог с указанным уровнем.
+- <mark style="background-color: lightblue">Log(_level, _msg)</mark> - делает лог с указанным уровнем. Предоставленные уровни логирования: 'INFO', 'DEBUG' 'ERROR', 'WARN'. 
 
 </div>
 
